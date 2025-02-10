@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Navbar</title>
+  <link rel="stylesheet" href="kaj site.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">AVENTURE</a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Aventure</a></li>
+          <li><a href="">Support</a></li>
+          <li><a href="">Infos</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-hamburger">
+        <div class="h"></div>
+        <div class="h"></div>
+        <div class="h"></div>
+      </div>
+    </nav>
+    <br><br>
+
+
+    <div class="progress">
+      <div class="skill">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+          <defs>
+            <linearGradient id="GradientColor">
+              <stop offset="0%" stop-color="darkviolet" />
+              <stop offset="100%" stop-color="#ff1408" />
+            </linearGradient>
+          </defs>
+          <circle cx="80" cy="80" r="70" stroke-linecap="round">
+        </svg>
+        <div class="outer">
+          <div class="inner">
+            <div id="number">65%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bt">
+      <button onclick="progress()">
+        Soumettre
+      </button>
+    </div>
+  </header>
+  <script>
+    function progress() {
+      let number = document.getElementById("number");
+      let counter = 0;
+      setInterval(() => {
+        if (counter == 65) {
+          clearInterval();
+        } else {
+          counter += 1;
+          number.innerHTML = counter + "%";
+        }
+      }, 30)
+    }
+  </script>
+</body>
+<script>
+  const menuHamburger = document.querySelector(".menu-hamburger")
+  const navlinks = document.querySelector(".nav-links")
+
+  menuHamburger.addEventListener('click', () => {
+    navlinks.classList.toggle('mobile-menu')
+  })
+</script>
+
+</html>
