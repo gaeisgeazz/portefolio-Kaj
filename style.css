@@ -1,0 +1,147 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.username {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+#user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.plans {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-plan {
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+#link {
+    color: #007bff;
+}
+
+.text {
+    text-align: left;
+    padding: 20px;
+}
+
+strong {
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer ul li a i {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    footer ul {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    footer ul li {
+        margin: 0 10px;
+    }
+}

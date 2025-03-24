@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de connexion</title>
+    <link rel="stylesheet" href="signlogin.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+    <div class="content">
+        <img src="img/logo.png" alt="Logo du site" class="mark-logo">
+        <div class="container">
+            <h2>Connexion</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Numéro de téléphone" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <button type="submit">Se connecter</button>
+            </form>
+            <P>Je n'ai pas de compte.<a href="index.html">Inscrivez-vous</a> </P>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        if (username === storedUsername && password === storedPassword) {
+            // Sauvegarde du nom d'utilisateur dans le localStorage pour la session
+            localStorage.setItem('currentUsername', username);
+            // Redirection vers la page d'accueil
+            window.location.href = 'home.html';
+        } else {
+            alert('Nom d\'utilisateur ou mot de passe incorrect.');
+        }
+    });
+</script>
+
+</html>

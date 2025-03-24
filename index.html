@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="signlogin.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+    <div class="content">
+        <img src="img/logo.png" alt="Logo du site" class="mark-logo">
+        <div class="container">
+            <h2>Inscription</h2>
+            <form id="signupForm">
+                <input type="text" id="signupUsername" placeholder="Numéro de téléphone" required>
+                <input type="password" id="signupPassword" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+            <p>J'ai déja un compte. <a href="login.html">Connectez-vous</a> </p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('signupUsername').value;
+            const password = document.getElementById('signupPassword').value;
+
+            // Sauvegarde des informations d'inscription
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            // Redirection vers le formulaire de connexion
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+
+</html>

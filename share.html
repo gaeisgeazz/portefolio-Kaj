@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Partage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo du site">
+      </div>
+      <div class="username">
+        <img src='img/user.png' id='user'>
+        <span id="username"></span>
+      </div>
+    </header>
+
+  <style>
+   .containe {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+input {
+    width: 90%;
+    padding: 15px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 600px) {
+    input {
+        width: 80%;
+    }
+}
+
+  </style>
+
+  <main>
+    <div class="containe">
+      <h1>Partager le lien du site</h1>
+      <input type="text" id="siteLink" value="http://gaeis.onrender.com/" readonly>
+      <button onclick="copyLink()">Copier le lien</button>
+    </div>
+  </main>
+
+  <footer>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i><span>À propos</span></a></li>
+      <li><a href="share.html"><i class="fas fa-share"></i><span>Partager</span></a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+    </ul>
+  </footer>
+  <script>
+    const username = localStorage.getItem('currentUsername');
+    document.getElementById('username').textContent = username ? username : 'Invité';
+  </script>
+  <script>
+    function copyLink() {
+      var copyText = document.getElementById("siteLink");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // Pour les mobiles
+
+      document.execCommand("copy");
+
+      alert("Lien copié: " + copyText.value);
+    }
+  </script>
+</body>
+
+</html>

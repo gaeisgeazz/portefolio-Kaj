@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo du site">
+    </div>
+    <div class="username">
+      <img src='img/user.png' id='user'>
+      <span id="username"></span>
+    </div>
+  </header>
+  <main>
+    <!DOCTYPE html>
+    <html lang="fr">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    </head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        padding: 20px;
+      }
+
+      .contact-buttons a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 15px 30px;
+        margin: 10px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        width: 80%;
+        max-width: 300px;
+        justify-content: center;
+      }
+
+      .contact-buttons a i {
+        margin-right: 10px;
+      }
+
+      .whatsapp-button {
+        background-color: #25D366;
+      }
+
+      .whatsapp-button:hover {
+        background-color: #1DA851;
+      }
+
+      .telegram-button {
+        background-color: #0088CC;
+      }
+
+      .telegram-button:hover {
+        background-color: #006BA1;
+      }
+
+      .text {
+        text-align: left;
+        padding: 20px;
+      }
+
+      strong {
+        font-size: 25px;
+        font-weight: 500;
+      }
+
+      @media(min-width: 600px) {
+        .contact-buttons {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .contact-buttons a {
+          width: auto;
+        }
+      }
+
+      .social-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .social-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #3b5998;
+        /* Facebook color by default */
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      .social-button.facebook {
+        background-color: #3b5998;
+      }
+
+      .social-button.twitter {
+        background-color: #1da1f2;
+      }
+
+      .social-button.instagram {
+        background-color: #e1306c;
+      }
+    </style>
+    <h1 style="text-align: center;"> Contactez-Nous</h1>
+    <div class="contact-buttons">
+      <a href="https://wa.me/+237672989965" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://t.me/@Carlssagan" class="telegram-button" target="_blank">
+        <i class="fab fa-telegram-plane"></i> Telegram
+      </a>
+    </div>
+
+    <div class="text">
+
+      Nous sommes là pour vous aider ! Si vous avez des questions,
+      des préoccupations ou des suggestions,
+      n’hésitez pas à nous contacter via l’un des moyens suivants :
+
+      <br><br><strong>Par téléphone</strong><br><br>
+      Nos équipes sont disponibles
+
+      Du lundi au vendredi : 9h00 à 18h00
+
+
+      <br><br><strong>Par e-mail</strong><br><br>
+      Envoyez-nous un e-mail directement à :
+      <a href="https://mail.google.com/mail/u/1/#inbox" id="link">Gaeisgeazz@gmail.com</a>
+      Nous vous répondrons sous 24 à 48 heures ouvrées.
+
+      <br><br>
+      <strong> Réseaux sociaux</strong><br><br>
+      Vous pouvez également nous contacter via nos réseaux sociaux :
+      <div class="social-buttons">
+        <a href="https://www.facebook.com" class="social-button facebook" target="_blank"> <i
+            class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.twitter.com" class="social-button twitter" target="_blank"> <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" class="social-button instagram" target="_blank"> <i
+            class="fab fa-instagram"></i> </a>
+      </div>
+      Nous sommes impatients de vous aider ! 😊
+
+      <div class="box" style="height: 150px;"></div>
+    </div>
+</body>
+
+</html>
+
+</main>
+<footer>
+  <ul>
+    <li><a href="home.html"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+    <li><a href="about.html"><i class="fas fa-info-circle"></i><span>À propos</span></a></li>
+    <li><a href="share.html"><i class="fas fa-share"></i><span>Partager</span></a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+  </ul>
+</footer>
+<script>
+  const username = localStorage.getItem('currentUsername');
+  document.getElementById('username').textContent = username ? username : 'Invité';
+</script>
+</body>
+
+</html>

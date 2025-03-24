@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus Quotidien</title>
+    <link rel="stylesheet" href="bonus.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+</head>
+
+<body>
+    <div class="container">
+        <a href="depodraw1.html" class="return-button">Solde Basic</a>
+        <a href="depodraw2.html" class="return-button">Solde premieum</a>
+        <h1>Bonus Quotidien</h1>
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <div id="balance">Solde: 0</div>
+        </div>
+        <button id="bonusButton" onclick="increaseBalance()">Obtenir Bonus</button>
+        <div id="timer"></div>
+    </div>
+    <script src="bonus.js"></script>
+</body>
+
+</html>

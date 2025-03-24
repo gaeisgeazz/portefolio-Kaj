@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan basic</title>
+    <link rel="stylesheet" href="depodraw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+   
+</head>
+
+<body>
+    <div class="container">
+        <a href="bonus.html" class="bonus-button">
+            <button>bonus journalier</button>
+        </a>
+        <h1>Gestion de Solde</h1>
+        <form class="form-group">
+            <label for="amount" class="amount">Montant de 1000 Fcfa:</label>
+            <input type="number" id="amount" name="balance" min="1000" max="1000"
+                placeholder="Entrer un montant de 1000 Fcfa">
+        </form>
+        <div class="form-group">
+            <button type="button" onclick="initiateDeposit()">Déposer</button>
+            <button type="button" onclick="withdraw()">Retirer</button>
+        </div>
+        <div class="balance-container">
+            <div id="balance">Solde: 0</div>
+        </div>
+    </div>
+
+    <div id="confirmation" class="container" style="display: none;">
+        <div style="height: 100px;"></div>
+
+        <p>Suivez les étapes dans téléphone et copiez le numéro:</p>
+
+        <div class="paid">
+            <div class="mtn">
+                MTN
+                <div class="code-box">
+                    ⦁ *126#<br>
+                    ⦁ 1 transfert d'argent<br>
+                    ⦁ 1 vers un numéro MTN
+                    <div class="flex-container">
+                        ⦁ Entrer le num : <p class="num" onclick="copyCode('674118322')"> 674118322</p>
+                    </div>
+                    ⦁ Entrer le montant : 1000<br>
+                    ⦁ Entrer la ref : 1<br>
+                    ⦁ Entrer votre code secret<br>
+                </div>
+            </div>
+            <div class="orange">
+                ORG
+                <div class="code-box">
+                    ⦁ #150#<br>
+                    ⦁ 1 transfert<br>
+                    ⦁ 1 vers un client OM
+                    <div class="flex-container">
+                        ⦁ Entrer le num :<p class="num" onclick="copyCode('695694068')">695694068</p>
+                    </div>
+                    ⦁ Entrer le montant : 1000<br>
+                    ⦁ 2 Ne pas ajouter les frais<br>
+                    ⦁ entrer votre code secret<br>
+                </div>
+            </div>
+        </div>
+
+        <form id="confirmationForm" style="align-items: center;">
+            <label for="transactionImage">Televerser la capture du message</label>
+            <input type="file" id="transactionImage" name="balance" accept="image/*">
+            <button type="button" onclick="confirmDeposit()">Confirmer</button>
+            <div style="height: 100px;"></div>
+
+        </form>
+
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i><span>À propos</span></a></li>
+            <li><a href="share.html"><i class="fas fa-share"></i><span>Partager</span></a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const username = localStorage.getItem('currentUsername');
+        document.getElementById('username').textContent = username ? username : 'Invité';
+    </script>
+
+    <script src="depodraw1.js"></script>
+</body>
+
+</html>

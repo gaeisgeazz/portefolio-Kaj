@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'Accueil</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo du site">
+    </div>
+    <div class="username">
+      <img src='img/user.png' id='user'>
+      <span id="username"></span>
+    </div>
+  </header>
+  <div class="text">
+    Comment profiter de votre bonus journalier : Guide complet
+
+    Voici les instructions claires pour maximiser vos gains en suivant ces étapes simples :
+
+    <h4> 1. Choisissez votre plan</h4>
+
+    Deux options sont disponibles pour commencer :
+
+    Basic
+
+    Premium
+
+    Prenez le temps de choisir le plan qui correspond à vos besoins et vos objectifs financiers.
+
+    <h4> 2. Saisissez le montant de votre premier dépôt</h4>
+
+    Vous avez le choix entre deux montants de dépôt :
+
+    1000 FCFA
+
+    5000 FCFA
+
+    Sélectionnez le montant que vous souhaitez déposer pour démarrer.
+
+    <h4> 3. Copiez le code à partir de votre application "Téléphone"</h4>
+
+    Accédez à votre application téléphonique pour effectuer la transaction.
+
+    Copiez l'un des codes fournis dans l'application.
+
+    Entrez votre code secret pour valider l'opération.
+
+    <h4> 4. Téléversez la capture d'écran de la transaction</h4>
+
+    Une fois la transaction effectuée, prenez une capture d'écran du message de confirmation.
+
+    Téléversez cette capture dans l'application pour vérification.
+
+    <h4> 5. Confirmez votre dépôt</h4>
+
+    Assurez-vous que tous les détails sont corrects.
+
+    Cliquez sur le bouton Confirmer le dépôt pour finaliser le processus.
+
+    <h4> 6. Activez le bonus journalier</h4>
+
+    Une fois votre dépôt confirmé, appuyez sur le bouton Bonus journalier.
+
+    Ensuite, cliquez sur Obtenir bonus.
+
+    <h4> 7. Augmentation quotidienne de votre solde</h4>
+
+    Votre solde augmentera automatiquement de 10% tous les 24 heures à chaque clic sur le bouton Obtenir
+    bonus.
+
+    Continuez à collecter vos bonus quotidiennement pour maximiser vos gains.
+
+    <h4> 8. Réglement sur les retraits</h4>
+
+    Les retraits ne sont disponibles qu'après 3 jours .
+
+    Planifiez vos retraits en conséquence pour tirer le meilleur parti de vos investissements.
+
+    En suivant ces instructions, vous pouvez profiter pleinement de cette opportunité et augmenter vos gains
+    facilement. Bon succès !
+  </div>
+  <div class="box" style="height: 150px; padding: 20px;">
+    <p> <b> <i> Creat by Kaj Geazy </i></b></p>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="home.html"><i class="fas fa-home"></i><span>Accueil</span></a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i><span>À propos</span></a></li>
+      <li><a href="share.html"><i class="fas fa-share"></i><span>Partager</span></a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+    </ul>
+  </footer>
+  <script>
+    const username = localStorage.getItem('currentUsername');
+    document.getElementById('username').textContent = username ? username : 'Invité';
+  </script>
+</body>
+</body>
+
+</html>
